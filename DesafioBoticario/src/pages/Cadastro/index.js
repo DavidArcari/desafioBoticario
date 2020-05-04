@@ -5,9 +5,13 @@ import {
   Button,
   TextInput,
   KeyboardAvoidingView,
+  Keyboard,
   StyleSheet
 } from 'react-native';
 
+function fazerCadastro() {
+  Keyboard.dismiss();
+}
 
 export default function Cadastro(){
 
@@ -19,23 +23,21 @@ export default function Cadastro(){
         <TextInput
           style={styles.inputs}
           placeholder='Nome'
-          //onChangeText={text => setState({name: text})}
         />
         <TextInput
           style={styles.inputs}
           placeholder='E-mail'
-          //onChangeText={text => setState({email: text})}
         />
         <TextInput
           style={styles.inputs}
           placeholder='Senha'
-          //onChangeText={text => setState({senha: text})}
+          secureTextEntry={true}
         />
       </View>
       <View>
         <Button 
           title="Cadastrar"
-          //onPress={gravarUsuario}
+          onPress={() => fazerCadastro()}
         />
       </View>
     </KeyboardAvoidingView>
@@ -47,7 +49,7 @@ const styles = StyleSheet.create({
     flex:1,
     alignItems: 'center',
     justifyContent: 'center',
-    backgroundColor: '#ffcc80'
+    backgroundColor: '#ff9933'
   },
   containerTxtIn: {
     flex:1,

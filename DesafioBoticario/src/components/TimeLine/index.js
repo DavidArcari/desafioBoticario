@@ -3,10 +3,11 @@ import {
   View,
   Text,
   StyleSheet,
-  Image
+  Image,
+  Button
 } from 'react-native';
 
-export default function TimeLine({ user, post }) {
+export default function TimeLine({ navigation, user, post }) {
     return(
     <View style={styles.container}>
         <Image 
@@ -40,7 +41,6 @@ export default function TimeLine({ user, post }) {
     container: {
         flexDirection: "row",
         padding: 7,
-        //backgroundColor: "#FFF"
     },
     fotoProfile: {
         width: 60,
@@ -59,19 +59,16 @@ export default function TimeLine({ user, post }) {
         flexShrink: 1,
         fontSize: 16,
         fontWeight: "bold",
-        color: "#000"
     },
     userProfile: {
         fontSize: 16,
-        color: "#262626"
+        color: "#595959"
     },
     tempo: {
         fontSize: 16,
-        color: "#000"
     },
     textBody: {
         fontSize: 16,
-        color: "#000",
         paddingTop: 2,
     },
     fotoBody: {

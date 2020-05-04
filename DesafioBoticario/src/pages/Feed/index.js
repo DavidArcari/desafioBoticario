@@ -22,6 +22,6 @@ export default function Feed({navigation}) {
 const styles = StyleSheet.create({
   container: {
     flex:1,
-    backgroundColor: "#ffcc80"
+    backgroundColor: "#ff9933"
   }
 });
